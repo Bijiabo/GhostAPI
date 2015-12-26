@@ -2,32 +2,35 @@
 
 ## Installation
 
-create cartfile:
-```
-touch Cartfile
-```
+1. create cartfile:
 
-edit Cartfile:
+	```
+	touch Cartfile
+	```
 
-```
-github "Bijiabo/GhostAPI"
-```
+2. edit Cartfile:
 
-run in shell:
+	```
+	github "Bijiabo/GhostAPI"
+	```
 
-```
-carthage update --platform iOS
-```
+3. run in shell:
+
+	```
+	carthage update --platform iOS
+	```
 
 ## Usage
 
 1. setup
+
   ```
   GhostAPI.sharedInstance.clientSecret = "your client secret"
   GhostAPI.sharedInstance.hostDomain = "yourdomain.com"
   ```
 
 2. fetch resource (i.e. `/tags`)
+
   ```
   GhostAPI.sharedInstance.tags { (error, json) -> Void in
       print(error)
