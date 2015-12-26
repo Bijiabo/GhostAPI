@@ -11,7 +11,9 @@
 		65D54CE21C2F120100F7B450 /* GhostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D54CE11C2F120100F7B450 /* GhostAPI.swift */; };
 		65D54CE41C2F125900F7B450 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54CE31C2F125900F7B450 /* Alamofire.framework */; };
 		65D54CEF1C2F191300F7B450 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D54CEE1C2F191300F7B450 /* Alamofire-SwiftyJSON.swift */; };
-		65D54CF11C2F1B4000F7B450 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54CF01C2F1B4000F7B450 /* SwiftyJSON.framework */; };
+		65D54CF51C2F21CD00F7B450 /* CustomOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D54CF41C2F21CD00F7B450 /* CustomOperator.swift */; };
+		65D54CF91C2F257C00F7B450 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D54CF81C2F257C00F7B450 /* SwiftyJSON.swift */; };
+		65D54CFA1C2F25E200F7B450 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54CF01C2F1B4000F7B450 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		65D54CE31C2F125900F7B450 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		65D54CEE1C2F191300F7B450 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		65D54CF01C2F1B4000F7B450 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		65D54CF41C2F21CD00F7B450 /* CustomOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperator.swift; sourceTree = "<group>"; };
+		65D54CF81C2F257C00F7B450 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D54CF11C2F1B4000F7B450 /* SwiftyJSON.framework in Frameworks */,
+				65D54CFA1C2F25E200F7B450 /* SwiftyJSON.framework in Frameworks */,
 				65D54CE41C2F125900F7B450 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +77,7 @@
 				65D54CAC1C2F110B00F7B450 /* GhostAPI.h */,
 				65D54CAE1C2F110B00F7B450 /* Info.plist */,
 				65D54CE11C2F120100F7B450 /* GhostAPI.swift */,
+				65D54CF41C2F21CD00F7B450 /* CustomOperator.swift */,
 			);
 			path = GhostAPI;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				65D54CEE1C2F191300F7B450 /* Alamofire-SwiftyJSON.swift */,
+				65D54CF81C2F257C00F7B450 /* SwiftyJSON.swift */,
 			);
 			name = lib;
 			path = GhostAPI;
@@ -219,6 +225,8 @@
 			files = (
 				65D54CE21C2F120100F7B450 /* GhostAPI.swift in Sources */,
 				65D54CEF1C2F191300F7B450 /* Alamofire-SwiftyJSON.swift in Sources */,
+				65D54CF51C2F21CD00F7B450 /* CustomOperator.swift in Sources */,
+				65D54CF91C2F257C00F7B450 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

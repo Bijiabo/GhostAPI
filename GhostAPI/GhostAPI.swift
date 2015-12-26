@@ -37,30 +37,34 @@ public class GhostAPI {
      Remote data fetch functions
      */
     
-    public func tags(completeHandler completeHandler: (error: ErrorType?, json: JSON)-> Void) {
-        let url: String = "\(hostAPI)tags"
-        let parameters: [String: String] = [
-            "client_id": clientId,
-            "client_secret": clientSecret
-        ]
-        
-        Alamofire.request(.GET, url, parameters: parameters)
-            .responseSwiftyJSON({ (request, response, json, error) in
-                completeHandler(error: error, json: json)
-            })
+    public var tags: (completeHander: (error: ErrorType?, json: JSON)-> Void) -> Void {
+        return request(path: "tags")
     }
     
-    public func posts(completeHandler completeHandler: (error: ErrorType?, json: JSON)-> Void) {
-        let url: String = "\(hostAPI)posts"
-        let parameters: [String: String] = [
+    public var posts: (completeHander: (error: ErrorType?, json: JSON)-> Void) -> Void {
+        return request(path: "posts")
+    }
+    
+    public var users: (completeHander: (error: ErrorType?, json: JSON)-> Void) -> Void {
+        return request(path: "users")
+    }
+    
+    private func request(path path: String, var parameters: [String: String] = [String: String]()) -> ((error: ErrorType?, json: JSON)-> Void) -> Void {
+        let url: String = "\(hostAPI)\(path)"
+        parameters += [
             "client_id": clientId,
             "client_secret": clientSecret
         ]
+
+        return { (completeHandler: (error: ErrorType?, json: JSON)-> Void) -> Void  in
+            Alamofire
+                .request(.GET, url, parameters: parameters)
+                .responseSwiftyJSON({ (request, response, json, error) in
+                    completeHandler(error: error, json: json)
+                })
+        }
         
-        Alamofire.request(.GET, url, parameters: parameters)
-            .responseSwiftyJSON({ (request, response, json, error) in
-                completeHandler(error: error, json: json)
-            })
     }
     
 }
+
