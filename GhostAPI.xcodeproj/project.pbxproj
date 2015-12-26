@@ -10,6 +10,8 @@
 		65D54CAD1C2F110B00F7B450 /* GhostAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D54CAC1C2F110B00F7B450 /* GhostAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65D54CE21C2F120100F7B450 /* GhostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D54CE11C2F120100F7B450 /* GhostAPI.swift */; };
 		65D54CE41C2F125900F7B450 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54CE31C2F125900F7B450 /* Alamofire.framework */; };
+		65D54CEF1C2F191300F7B450 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D54CEE1C2F191300F7B450 /* Alamofire-SwiftyJSON.swift */; };
+		65D54CF11C2F1B4000F7B450 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D54CF01C2F1B4000F7B450 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		65D54CD21C2F113200F7B450 /* GhostAPI_Example.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GhostAPI_Example.xcodeproj; path = ../GhostAPI_Example/GhostAPI_Example.xcodeproj; sourceTree = "<group>"; };
 		65D54CE11C2F120100F7B450 /* GhostAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostAPI.swift; sourceTree = "<group>"; };
 		65D54CE31C2F125900F7B450 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		65D54CEE1C2F191300F7B450 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
+		65D54CF01C2F1B4000F7B450 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D54CF11C2F1B4000F7B450 /* SwiftyJSON.framework in Frameworks */,
 				65D54CE41C2F125900F7B450 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,7 +51,8 @@
 		65D54C9F1C2F110B00F7B450 = {
 			isa = PBXGroup;
 			children = (
-				65D54CE31C2F125900F7B450 /* Alamofire.framework */,
+				65D54CF31C2F1C0E00F7B450 /* lib */,
+				65D54CF21C2F1BF500F7B450 /* frameworks */,
 				65D54CAB1C2F110B00F7B450 /* GhostAPI */,
 				65D54CAA1C2F110B00F7B450 /* Products */,
 				65D54CD21C2F113200F7B450 /* GhostAPI_Example.xcodeproj */,
@@ -77,6 +83,24 @@
 				65D54CD71C2F113200F7B450 /* GhostAPI_Example.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		65D54CF21C2F1BF500F7B450 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65D54CF01C2F1B4000F7B450 /* SwiftyJSON.framework */,
+				65D54CE31C2F125900F7B450 /* Alamofire.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		65D54CF31C2F1C0E00F7B450 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				65D54CEE1C2F191300F7B450 /* Alamofire-SwiftyJSON.swift */,
+			);
+			name = lib;
+			path = GhostAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +201,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			name = "Run Script For Carthage";
 			outputPaths = (
@@ -193,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D54CE21C2F120100F7B450 /* GhostAPI.swift in Sources */,
+				65D54CEF1C2F191300F7B450 /* Alamofire-SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -278,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,6 +328,7 @@
 				);
 				INFOPLIST_FILE = GhostAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.GhostAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -324,6 +351,7 @@
 				);
 				INFOPLIST_FILE = GhostAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bijiabo.GhostAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
